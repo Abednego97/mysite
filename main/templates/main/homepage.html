@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+{% extends 'main/header.html' %}
+
+{% block content %}
+		   <div class="row">
+				{% for t in tutorials %}
+				    <div class="col s12 m6 l4">
+				      <div class="card hoverable">
+				        <div class="card-content black-text">
+				          <span class="card-title">{{t.Tut_Tittle}}</span>
+				          <p style="font-size:70%">{{t.Tut_Date}}</p>
+				          <p>{{t.Tut_Content|safe}}</p>
+				        </div>
+				        <div class="card-action">
+				          <a href="#">Visit</a>	         
+				        </div>
+				      </div>
+				    </div>
+				{% endfor %} 	    
+		   </div>	  	
+{% endblock %}
+</html>
